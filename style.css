@@ -1,0 +1,147 @@
+@import url('/fonts/fonts.css');
+
+/* Reset some default styles */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #F8FAFC;
+    color: #333;
+}
+
+/* Header styling */
+header {
+    text-align: center;
+    margin: 40px 0;
+}
+
+header h1 {
+    font-size: 2.25rem;
+    font-weight: 600;
+    color: #222;
+    line-height: 1.3;
+}
+
+.seperator {
+    display: block;
+    margin:0 auto 20px; /* Center the separator and add bottom spacing */
+    width: 30%; /* Adjust width as needed */
+}
+
+
+/* Main content and article section styling */
+main {
+    display: flex;
+    justify-content: center;
+  
+}
+
+#articles {
+    display: grid;
+    gap: 20px;
+    max-width: 810px;
+    width: 100%;
+}
+
+/* Individual article styling */
+#articles div {
+    display: flex;
+    align-items: center; /* Center the image and text vertically */
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: fit-content;
+    transition: transform 0.3s;
+    
+}
+
+
+
+#articles picture {
+    margin-right: 50px; /* Space between image and text */
+}
+
+#articles img {
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+/* Text container to align h2 and p */
+.text-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* Allow this container to take available space */
+}
+
+h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px; /* Space between heading and paragraph */
+    margin-top: -10px;
+}
+
+/* Position the date to the left */
+p {
+    color: #6C727F;
+    font-size: 0.875rem;
+    font-weight: 500;
+    align-self: flex-start; /* Align date to the left side */
+    margin-top: auto; /* Push date to the bottom */
+}
+
+
+/* Responsive Styles */
+@media (max-width: 1280px) {
+    #articles {
+        max-width: 700px; /* Adjust the max width on smaller desktops */
+    }
+}
+
+@media (max-width: 1024px) {
+    #articles {
+        max-width: 600px;
+    }
+
+    #articles div {
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 2rem; /* Slightly smaller font size for tablets */
+    }
+
+    h2 {
+        font-size: 1.125rem;
+    }
+
+    p {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 640px) {
+    #articles {
+        max-width: 100%;
+    }
+
+    header h1 {
+        font-size: 1.75rem;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: 0.75rem;
+    }
+
+    .separator {
+        width: 100px;
+    }
+}
